@@ -8,29 +8,35 @@
 <script>
     number = prompt("Nhập vào số muốn kiểm tra: ")
     function isFibonacci(number){
-        var a = 1;
-        var b = 0;
-        var arr = [1];
-        var term;
+        var k = 1;
         if (number <= 0){
             alert("Số đó không nằm trong dãy Fibonacci")
         } else {
-            for (let i = 0; ; i++){
+            var a = 1;
+            var b = 0;
+            var arr = [1];
+            var term;
+            for (let i = 0; i <= number; i++){
                 term = a;
                 a = a + b;
                 b = term;
                 arr.push(a)
                 for (let j = 0; j < arr.length; j++){
                     if (number == arr[j]){
-                        return true;
+                        k = 1;
+                        break
                     } else {
-                        return false;
-                        continue;
-
+                        k = 0;
                     }
                 }
             }
+            if (k == 1){
+                alert(true) ;
+            } else {
+                alert(false) ;
+            }
         }
+
     }
 
     var check = isFibonacci(number)
