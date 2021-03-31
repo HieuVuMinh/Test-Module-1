@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arrayScore = [4,1,7,9,5,3,7,8,3]
+    function findMax(array) {
+        let max = array[0];
+        for (let i = 0; i < array.length; i++){
+            if(max < array[i]){
+                max = array[i];
+            }
+        }alert("Phần tử lớn nhất của mảng: " + max)
+    }
+    findMax(arrayScore)
+</script>
+</body>
+</html>
